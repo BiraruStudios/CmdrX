@@ -17,14 +17,15 @@ jobs:
         uses: actions/checkout@v4
 
       # Setup tools
-      - name: Run aftman
-        uses: ok-nick/setup-aftman@main
+      - name: Run RoKit
+        uses: CompeyDev/setup-rokit@v0.1.2
 
-      # Run linter
+      # Run Selene
       - name: Update standard library
         run: selene update-roblox-std
       - name: Run Selene
         run: selene --allow-warnings ./Cmdr
 
+      # Run Stylua
       - name: Validate Stylua
         run: stylua -c ./Cmdr
