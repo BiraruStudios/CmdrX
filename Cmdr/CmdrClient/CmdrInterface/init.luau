@@ -60,21 +60,21 @@ return function(Cmdr)
 				local isPartial = false
 				if lastArgument.RawSegmentsAreAutocomplete then
 					for i, segment in ipairs(lastArgument.RawSegments) do
-                        acItems[i] = { 
-                            typed = segment, 
-                            value = segment 
-                        }
-                    end
+						acItems[i] = {
+							typed = segment,
+							value = segment,
+						}
+					end
 				else
 					local items, options = lastArgument:GetAutocomplete()
 					options = options or {}
 					isPartial = options.IsPartial or false
 
 					for i, item in pairs(items) do
-						acItems[i] = { 
-                            typed = typedText, 
-                            value = item 
-                        }
+						acItems[i] = {
+							typed = typedText,
+							value = item,
+						}
 					end
 				end
 
@@ -108,13 +108,13 @@ return function(Cmdr)
 			local exactMatch
 			if exactCommand then
 				exactMatch = {
-                    typed = exactCommand.Name,
-                    value = exactCommand.Name,
-                    options = {
-                        name = exactCommand.Name,
-                        description = exactCommand.Description,
-                    },
-                }
+					typed = exactCommand.Name,
+					value = exactCommand.Name,
+					options = {
+						name = exactCommand.Name,
+						description = exactCommand.Description,
+					},
+				}
 
 				local arg = exactCommand.Args and exactCommand.Args[1]
 
@@ -143,13 +143,13 @@ return function(Cmdr)
 				then
 					local commandObject = Cmdr.Registry:GetCommand(cmd)
 					acItems[#acItems + 1] = {
-                        typed = commandText,
-                        value = cmd,
-                        options = {
-                            name = commandObject.Name,
-                            description = commandObject.Description,
-                        },
-                    }
+						typed = commandText,
+						value = cmd,
+						options = {
+							name = commandObject.Name,
+							description = commandObject.Description,
+						},
+					}
 				end
 			end
 
