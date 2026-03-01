@@ -171,8 +171,8 @@ function Util.EncodeEscapedOperator(text: string, op: string): string
 	local escapedOp = op:gsub(".", "%%%1")
 	local escapedFirst = "%" .. first
 
-	return text:gsub("(" .. escapedFirst .. "+)(" .. escapedOp .. ")", function(esc, op)
-		return (esc:sub(1, #esc - 1) .. op):gsub(".", function(char)
+	return text:gsub("(" .. escapedFirst .. "+)(" .. escapedOp .. ")", function(capturedEscapes, capturedOp)
+		return (capturedEscapes:sub(1, #capturedEscapes - 1) .. capturedOp):gsub(".", function(char)
 			return "\\u" .. string.format("%04x", string.byte(char), 16)
 		end)
 	end)

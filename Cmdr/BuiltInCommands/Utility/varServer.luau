@@ -4,9 +4,9 @@ local queue = {}
 local DataStoresActive, DataStore
 task.spawn(function()
 	DataStoresActive, DataStore = pcall(function()
-		local DataStore = DataStoreService:GetDataStore("_package/eryn.io/Cmdr")
-		DataStore:GetAsync("test_key")
-		return DataStore
+		local dataStore = DataStoreService:GetDataStore("_package/eryn.io/Cmdr")
+		dataStore:GetAsync("test_key")
+		return dataStore
 	end)
 
 	while #queue > 0 do
