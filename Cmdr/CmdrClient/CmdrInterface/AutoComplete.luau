@@ -109,8 +109,6 @@ return function(Cmdr)
 
 		Gui.ScrollBarThickness = 0
 
-		print(items)
-
 		for i, item in pairs(self.Items) do
 			local leftText = item.typed
 			local rightText = item.value

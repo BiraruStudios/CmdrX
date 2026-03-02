@@ -137,10 +137,11 @@ return function(Cmdr)
 
 			local acItems = { exactMatch }
 			for _, cmd in pairs(Cmdr.Registry:GetCommandNames()) do
-				if
-					commandText:lower() == cmd:lower():sub(1, #commandText)
-					and (exactMatch == nil or exactMatch[1] ~= commandText)
-				then
+				if commandText:lower() == cmd:lower():sub(1, #commandText) then
+					if exactMatch and cmd:lower() == exactMatch.value:lower() then
+						continue
+					end
+
 					local commandObject = Cmdr.Registry:GetCommand(cmd)
 					acItems[#acItems + 1] = {
 						typed = commandText,
