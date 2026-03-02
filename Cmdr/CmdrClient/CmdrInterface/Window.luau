@@ -266,7 +266,7 @@ function Window:BeginInput(input, gameProcessed)
 		local item = self.AutoComplete:GetSelectedItem()
 		local text = self:GetEntryText()
 		if item and not (text:sub(#text, #text):match("%s") and self.AutoComplete.LastItem) then
-			local replace = item[2]
+			local replace = item.value
 			local newText
 			local insertSpace = true
 			local command = self.AutoComplete.Command
