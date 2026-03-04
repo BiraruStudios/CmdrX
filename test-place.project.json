@@ -1,13 +1,13 @@
 {
-  "name": "Cmdr",
+  "name": "CmdrX",
   "tree": {
     "$className": "DataModel",
     "$ignoreUnknownInstances": true,
     "ServerScriptService": {
       "$className": "ServerScriptService",
 
-      "Cmdr": {
-        "$path": "./Cmdr"
+      "CmdrX": {
+        "$path": "./CmdrX"
       }
     }
   }

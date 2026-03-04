@@ -1,24 +1,24 @@
-# Cmdr Security Policy
+# CmdrX Security Policy
 
-We take the security of Cmdr extremely seriously. If you believe you have found a vulnerability within the library, you need to report it to us.
+We take the security of CmdrX extremely seriously. If you believe you have found a vulnerability within the library, you need to report it to us.
 
 We recommend reading this policy fully before you report any vulnerabilities. This helps us ensure that you understand the policy and act in compliance with it.
 
 We value those who take the time and effort to report security vulnerabilities according to this policy and will offer recognition as appropriate. However, as an independent open-source project, we cannot offer monetary rewards for vulnerability disclosures.
 
-"We", "us", "our", etc. in this policy refers to the Cmdr maintainers in conjunction. "You", etc. refers to a person who has or intends to discover or report a vulnerability.
+"We", "us", "our", etc. in this policy refers to the CmdrX maintainers in conjunction. "You", etc. refers to a person who has or intends to discover or report a vulnerability.
 
 ## A quick note for our users
 
-It's important that you keep your libraries up to date. We do not monitor, accept reports pertaining to, provide support for, or patch bugs on old versions of Cmdr.
+It's important that you keep your libraries up to date. We do not monitor, accept reports pertaining to, provide support for, or patch bugs on old versions of CmdrX.
 
-If you're experiencing issues, our first recommendation will always be to update Cmdr; this applies even if the update is major (breaking).
+If you're experiencing issues, our first recommendation will always be to update CmdrX; this applies even if the update is major (breaking).
 
 To be clear, we reserve the right to backport security fixes as we see appropriate, and may do so in extreme circumstances. But as a general rule, it's not something you can expect us to do.
 
 ## Reporting
 
-If you believe you have found a security vulnerability in Cmdr, you can get in touch with us over Discord.
+If you believe you have found a security vulnerability in CmdrX, you can get in touch with us over Discord.
 
 Please have ready to share with us, when we request, steps to reproduce and/or a proof of concept (such as a place file or malicious script).
 
@@ -32,15 +32,11 @@ You'll need to contact one of our maintainers:
 
 > If one of the usernames above have changed and are no longer accurate, or you want to double check the usernames are correct, you can use the https://discord.id/ lookup service.
 
-Please approach a maintainer, ideally privately but if not then publicly, and inform them that you need to report a Cmdr security bug. We'll respond with further instructions so you can deliver your report to us.
+Please approach a maintainer, ideally privately but if not then publicly, and inform them that you need to report a CmdrX security bug. We'll respond with further instructions so you can deliver your report to us.
 
-If all else fails and you can't get in touch with any maintainer, please open a GitHub issue stating simply you have a security report and you're struggling to get in touch. We can help from there.
+If all else fails and you can't get in touch with any maintainer, please open a GitHub issue with the title 'Security Disclosure: Requesting Private Contact' and do not include any details about the bug in the description. We can help from there.
 
 > **Warning**: If you attempt to get in touch publicly, you must not disclose or hint at any information pertaining to the contents of your report. Please do not send details privately in a drive-by fashion either; we will tell you, explicitly when to provide information about your report, which will be in a secure channel (usually a private Discord groupchat between you and the maintainers).
-
-### Email
-
-We're planning on creating an email address for reports to be submitted to, but initial testing was unsuccessful. We'll update this policy if and when we have any other lines for you to get in touch.
 
 ## What to expect
 
@@ -73,8 +69,8 @@ We will **not** consider reports which:
 - indicate that the library does not fully align with "best practice" without identifying a specific vulnerability
 - detail vulnerabilities that require the execution of server-sided code
 - detail vulnerabilities that only have client-sided impact; for instance, bypassing hooks or guards on a client-only command
-- vulnerabilities which do not affect the latest released version of Cmdr or the 'mainline' version (the current code on the main branch)
-- do not relate to the Cmdr library; for example, a bug in example code we provide on our website/Discord or a bug which only affects a downstream project or game that uses/depends on Cmdr. In the case of downstream vulnerabilities, you should report these to them directly.
+- vulnerabilities which do not affect the latest released version of CmdrX or the 'mainline' version (the current code on the main branch)
+- do not relate to the CmdrX library; for example, a bug in example code we provide on our website/Discord or a bug which only affects a downstream project or game that uses/depends on CmdrX. In the case of downstream vulnerabilities, you should report these to them directly.
 
 Generally speaking, reports peratining to things like Denial of Service, rate limiting, and spam are unlikely to be considered unless these have side effects which can create a vulnerability (fictional example: spamming a hook-restricted command 100,000 times will let you bypass the hook).
 
@@ -86,6 +82,6 @@ If you've identified a potential vulnerability in a pull request which hasn't be
 
 This policy is designed to be compatible with common vulnerability disclosure good practice. It does not give you permission to act in any way that is inconsistent with the law, or which might cause us or our users to be in breach of any legal obligations.
 
-Since we don't own the games Cmdr runs in, we usually do not have the standing to seek charges for computer intrusion or abuse offences. Accordingly, we can't provide any type of indemnity; you should refer to the policies of Roblox and any game you intend to conduct testing against (if not your own).
+Since we don't own the games CmdrX runs in, we usually do not have the standing to seek charges for computer intrusion or abuse offences. Accordingly, we can't provide any type of indemnity; you should refer to the policies of Roblox and any game you intend to conduct testing against (if not your own).
 
 **Nothing in this policy is legal advice. Nothing in this policy is legally binding (e.g. a contract).**
