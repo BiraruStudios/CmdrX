@@ -12,7 +12,7 @@ function Hero() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
-        <h1 className="hero__title">Cmdr</h1>
+        <h1 className="hero__title">CmdrX</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -51,31 +51,31 @@ export default function Home() {
       <main>
         <div className="container">
           <Admonition type="info" title="Beta">
-            This website is a new service and <a href="https://github.com/evaera/Cmdr/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it. In the mean time, you may find it helpful to refer to <a href="https://eryn.io/Cmdr" target="_blank">the current documentation</a>.
+            This website is a new service and <a href="https://github.com/BiraruStudios/CmdrX/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it.
           </Admonition>
 
           <section className={styles.featuresOuter}>
             <div className={styles.featuresInner}>
-              <Feature title="Integrates with your systems" description="Cmdr stays out of the way, making it easy to write your own commands which plug-in to your systems. Help debug your game by triggering events or printing useful data." />
+              <Feature title="Integrates with your systems" description="CmdrX stays out of the way, making it easy to write your own commands which plug-in to your systems. Help debug your game by triggering events or printing useful data." />
               <Feature title="Type-safe with intelligent autocomplete" description="Discover commands and possible values for arguments naturally with context-aware autocomplete. Arguments are strictly typed and validated for you, keeping typos at bay." />
-              <Feature title="Powerful and extensible" description="Cmdr ships with optional built-in commands but you can register your own commands and types. Meta-commands like bind and alias make it possible to extend Cmdr even further." />
+              <Feature title="Powerful and extensible" description="CmdrX ships with optional built-in commands but you can register your own commands and types. Meta-commands like bind and alias make it possible to extend CmdrX even further." />
             </div>
           </section>
 
           <p className={styles.paragraphs}>
-            While Cmdr was originally designed to make debugging easier, Cmdr has been popularised as a general console and command system due to its powerful features and extensible nature. Of course, you don't need to use it for debugging; Cmdr can be used in whatever way works for you
+            Building on the legacy of the original project, <strong>CmdrX</strong> is a modernized fork designed to keep debugging and administrative workflows seamless. While the original was popularized as a versatile console system, CmdrX carries that extensible nature forward with updated standards, ensuring it works exactly the way you need it to for any project.
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr provides a friendly API that lets developers choose how they want Cmdr to work, to register their own commands, choose a different key bind for activating the console, or even disable Cmdr altogether.
+            CmdrX maintains the same friendly API that developers love, allowing full control over how the system operates. Easily register custom commands, define your own activation keybinds, or toggle the entire system—all within a framework optimized for modern Roblox development.
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr has a robust and friendly type validation system which gives users real-time feedback as they type. By the time the command actually gets to your code, you can be assured that all of the arguments are present and of the correct type, keeping both typos and exploiters at bay.
+            CmdrX inherits a robust type validation system that provides users with real-time feedback as they type. By enforcing strict type checks before a command ever reaches your code, CmdrX keeps your logic clean and protects your game from both simple typos and malicious exploiters.
           </p>
 
           <p className={styles.paragraphs}>
-            Cmdr has been around for over five years and is trusted in games with billions of visits earning millions of dollars worth of revenue. <Link to="/docs/intro#why-should-i-use-it">Tell me more →</Link>
+            As a fork of a system that has been trusted for over five years in games with billions of visits, CmdrX combines battle-tested reliability with community-driven improvements and modern maintenance. <Link to="/docs/intro#why-should-i-use-it">Tell me more →</Link>
           </p>
         </div>
       </main>

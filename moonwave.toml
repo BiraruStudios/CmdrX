@@ -1,11 +1,11 @@
-title = "Cmdr"
-gitRepoUrl = "https://github.com/evaera/cmdr"
-gitSourceBranch = "master"
+title = "CmdrX"
+gitRepoUrl = "https://github.com/BiraruStudios/CmdrX"
+gitSourceBranch = "main"
 changelog = true
 
 classOrder = [
-  "Cmdr",
-  "CmdrClient",
+  "CmdrX",
+  "CmdrXClient",
 
   "Registry",
   "Dispatcher",
@@ -16,14 +16,11 @@ classOrder = [
 ]
 
 [docusaurus]
-organizationName = "evaera"
-projectName = "Cmdr"
 deploymentBranch = "gh-pages"
-tagline = "The extensible command console for Roblox developers"
 titleDelimiter = "•"
 
-url = "https://eryn.io"
-baseUrl = "/Cmdr/beta/"
+url = "https://biraru.top"
+baseUrl = "/CmdrX/"
 
 # TODO: Remove when releasing new website
 noIndex = true
@@ -36,21 +33,16 @@ includeReadme = false
 title = ""
 
 [navbar.logo]
-alt = "Cmdr"
+alt = "CmdrX"
 src = "/logo.png"
 
 [[navbar.items]]
-href = "https://github.com/evaera/cmdr/releases"
+href = "https://github.com/BiraruStudios/CmdrX/releases"
 label = "Releases"
 position = "right"
 
-[[navbar.items]]
-href = "https://discord.gg/g5PdMxh"
-label = "Discord"
-position = "right"
-
 [footer]
-copyright = "Built using Docusaurus and Moonwave. Released under the <a href=\"https://github.com/evaera/Cmdr/blob/master/LICENSE\" target=\"_blank\">MIT License</a>."
+copyright = "Built using Docusaurus and Moonwave. Released under the <a href=\"https://github.com/BiraruStudios/CmdrX/blob/master/LICENSE\" target=\"_blank\">MIT License</a>."
 
 [[footer.links]]
 title = "Learn"
@@ -62,7 +54,7 @@ label = "Best practice"
 href = "/docs/advanced/bestpractice"
 [[footer.links.items]]
 label = "API reference"
-href = "/api/Cmdr"
+href = "/api/CmdrX"
 [[footer.links.items]]
 label = "Changelog"
 href = "/changelog"
@@ -76,8 +68,5 @@ href = "/docs/contribute"
 label = "Security"
 href = "/docs/community/securityreport"
 [[footer.links.items]]
-label = "Discord"
-href = "https://discord.gg/g5PdMxh"
-[[footer.links.items]]
 label = "Bug tracker"
-href = "https://github.com/evaera/Cmdr/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+href = "https://github.com/BiraruStudios/CmdrX/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
