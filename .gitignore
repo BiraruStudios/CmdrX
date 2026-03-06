@@ -40,6 +40,7 @@ luac.out
 *.hex
 
 node_modules/
+package-lock.json
 docs/CHANGELOG.md
 .vscode
 roblox.toml
