@@ -39,7 +39,9 @@
 }
 
 .featuresOuter {
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 0 2rem;
 }
@@ -80,6 +82,10 @@
   .feature:not(:last-child) {
     margin-bottom: 0.25rem;
   }
+}
+
+.betaWrapper {
+  margin-top: 1em;
 }
 
 /* @media (min-width: 56rem) {
