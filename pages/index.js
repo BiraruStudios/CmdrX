@@ -50,9 +50,11 @@ export default function Home() {
       <Hero />
       <main>
         <div className="container">
-          <Admonition type="info" title="Beta">
-            This website is a new service and <a href="https://github.com/BiraruStudios/CmdrX/issues/new?assignees=&labels=scope%3Aixp&projects=&template=websitefeedback.md" target="_blank">your feedback</a> will help improve it.
-          </Admonition>
+          <div className={styles.betaWrapper}>
+            <Admonition type="info" title="Beta">
+              This website is a new service and <a href="...">your feedback</a> will help improve it.
+            </Admonition>
+          </div>
 
           <section className={styles.featuresOuter}>
             <div className={styles.featuresInner}>

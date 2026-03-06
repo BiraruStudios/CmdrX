@@ -21,6 +21,7 @@ titleDelimiter = "•"
 
 url = "https://biraru.top"
 baseUrl = "/CmdrX/"
+tagline = "An advanced, developer-focused command console for Roblox. Built for speed, fueled by extensibility, and designed to put total game management at your fingertips."
 
 # TODO: Remove when releasing new website
 noIndex = true
