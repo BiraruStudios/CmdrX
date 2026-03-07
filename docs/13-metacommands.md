@@ -14,7 +14,7 @@ Sub-commands may be embedded inside command strings, in the format `${command ar
 
 Embedded commands are nestable: `run echo ${run echo ${echo hello}!}` (displays `hello!`). We use `run` here instead of just running `echo` directly, because embedded commands are only evaluated in the preprocess step of commands that use _command strings_ (which is only `run`, `alias`, and `bind`).
 
-By default, if the evaluated command output has a space in it, the return value will be encapsulated in quote marks so that the entire value is perceived as one argument to Cmdr. In cases where it's desirable for Cmdr to parse each word as a separate argument, you can use use a literal syntax: `run teleport ${{"echo first second"}​}` (in this example, "first" and "second" would then become the first and second arguments to the `teleport` command, instead of the first argument being "first second")
+By default, if the evaluated command output has a space in it, the return value will be encapsulated in quote marks so that the entire value is perceived as one argument to CmdrX. In cases where it's desirable for CmdrX to parse each word as a separate argument, you can use use a literal syntax: `run teleport ${{"echo first second"}​}` (in this example, "first" and "second" would then become the first and second arguments to the `teleport` command, instead of the first argument being "first second")
 
 ## Run
 
@@ -26,7 +26,7 @@ run ${{"echo kill me"}}
 
 Commands can contain more than one distinct command, delimited by `&&`. This can be escaped by adding an additional ampersand, for example: `&&&`. You can escape an additional level by adding more. `&&&&` is a two level deep escape.
 
-When using `&&`, you can access the previous command's output by using the `||` slot operator. For example `run echo evaera && kill ||` would cause `evaera` to die.
+When using `&&`, you can access the previous command's output by using the `||` slot operator. For example `run echo biraru && kill ||` would cause `biraru` to die.
 
 The `run` command has a single-character alias, `>`, which can also be used to invoke it.
 
@@ -34,7 +34,7 @@ The `run` command has a single-character alias, `>`, which can also be used to i
 
 Bind is a command that allows you to run a certain command string every time some event happens. The default bind type is by user input (mouse or keyboard input), but you can also bind to other events.
 
-This is very powerful: you could define a command, like `cast_ability`, which casts a certain move in your game. Then, you could have a keybindings menu that allows the user to rebind keys, and whenever they do, it runs `CmdrClient:Run("bind", keyCode.Name, "cast_ability", abilityId)` in the background. By separating the user input from our hypothetical ability code, our code is made more robust as we can now trigger abilities from a number of possible events, in addition to the bound key.
+This is very powerful: you could define a command, like `cast_ability`, which casts a certain move in your game. Then, you could have a keybindings menu that allows the user to rebind keys, and whenever they do, it runs `CmdrXClient:Run("bind", keyCode.Name, "cast_ability", abilityId)` in the background. By separating the user input from our hypothetical ability code, our code is made more robust as we can now trigger abilities from a number of possible events, in addition to the bound key.
 
 If you prefix the first argument with `@`, you can instead select a player to bind to, which will run this command string every time that player chats. You can get the chat text by using `$1` in your command string.
 
@@ -50,7 +50,7 @@ The alias command lets you create a new, single command out of a command string.
 alias farewell announce Farewell, $1! && kill $1
 ```
 
-Then, if we run `farewell evaera`, it would make an announcement saying `Farewell, evaera!` and then kill the player called `evaera`.
+Then, if we run `farewell biraru`, it would make an announcement saying `Farewell, biraru!` and then kill the player called `biraru`.
 
 As another example, you could create a command that killed anyone your mouse was currently hovering over like so:
 

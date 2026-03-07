@@ -18,7 +18,7 @@ Commands will be blocked from running in a live game unless you register at leas
 
 :::
 
-As a quick way to register hooks on both the server and the client, you can make a folder for your hooks, with module scripts in them which return a function. Similar to Types, if you call [`Cmdr.Registry:RegisterHooksIn(yourFolderHere)`](/api/Registry#RegisterHooksIn) from the server, Cmdr will load all ModuleScripts in the folder on the server and the client, so you only need to write your code once.
+As a quick way to register hooks on both the server and the client, you can make a folder for your hooks, with module scripts in them which return a function. Similar to Types, if you call [`CmdrX.Registry:RegisterHooksIn(yourFolderHere)`](/api/Registry#RegisterHooksIn) from the server, CmdrX will load all ModuleScripts in the folder on the server and the client, so you only need to write your code once.
 
 ```lua title="A ModuleScript inside your hooks folder."
 return function (registry)
@@ -36,10 +36,10 @@ The AfterRun hook runs directly after a command is run. The callback is also pas
 
 If this callback returns a string, then it will replace the normal response on the user's screen. If the callback returns nothing (`nil` or no return), then the response will be shown normally.
 
-This hook is most useful for logging. Since we don't want to add this hook on the client in this example, we can just require the server version of Cmdr and add this hook directly right here (as opposed to what we did in the BeforeRun example, which adds the hook to the client as well):
+This hook is most useful for logging. Since we don't want to add this hook on the client in this example, we can just require the server version of CmdrX and add this hook directly right here (as opposed to what we did in the BeforeRun example, which adds the hook to the client as well):
 
 ```lua
-Cmdr.Registry:RegisterHook("AfterRun", function(context)
+CmdrX.Registry:RegisterHook("AfterRun", function(context)
   print(context.Response) -- see the actual response from the command execution
   return "Returning a string from this hook replaces the response message with this text"
 end)
