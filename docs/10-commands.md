@@ -1,6 +1,6 @@
 # Commands
 
-No commands are registered by default. Cmdr ships with a set of default commands, which can be loaded if you so wish by calling [`Cmdr.Registry:RegisterDefaultCommands()`](/api/Registry#RegisterDefaultCommands). See [Default Commands](#default-commands) for a list.
+No commands are registered by default. CmdrX ships with a set of default commands, which can be loaded if you so wish by calling [`CmdrX.Registry:RegisterDefaultCommands()`](/api/Registry#RegisterDefaultCommands). See [Default Commands](#default-commands) for a list.
 
 Commands are defined in ModuleScripts that return a single table.
 
@@ -27,7 +27,7 @@ return {
 
 Check out the [API reference](/api/Registry#CommandDefinition) for full details.
 
-The server implementation should be in a separate ModuleScript. Cmdr will never deliver the server implementation to the client. This module should only return one function. The module must be named the same thing as the definition module as described above, with the word "Server" appended to the end (e.g. `Teleport.luau` and `TeleportServer.luau`).
+The server implementation should be in a separate ModuleScript. CmdrX will never deliver the server implementation to the client. This module should only return one function. The module must be named the same thing as the definition module as described above, with the word "Server" appended to the end (e.g. `Teleport.luau` and `TeleportServer.luau`).
 
 You can also include a client implementation, this is done by adding a function to your command definition (above) with the `ClientRun` key. You can also include both client and server implementations in one command but that's an advanced feature we'll discuss later on.
 
@@ -52,7 +52,7 @@ return function (context, fromPlayers, toPlayer)
 end
 ```
 
-Take a gander at the [built-in commands](https://github.com/evaera/Cmdr/tree/master/Cmdr/BuiltInCommands) for more examples.
+Take a gander at the [built-in commands](https://github.com/BiraruStudios/CmdrX/tree/master/CmdrX/BuiltInCommands) for more examples.
 
 ## Command data
 
@@ -98,7 +98,7 @@ We've not reviewed this section for a while, it's possible that this information
 
 :::
 
-If you run [`Cmdr.Registry:RegisterDefaultCommands()`](/api/Registry#RegisterDefaultCommands), these commands will be available with the following `Group`s:
+If you run [`CmdrX.Registry:RegisterDefaultCommands()`](/api/Registry#RegisterDefaultCommands), these commands will be available with the following `Group`s:
 
 Group: `DefaultAdmin`: `announce` (`m`), `bring`, `kick`, `teleport` (`tp`), `kill`, `respawn`, `to`
 
@@ -112,11 +112,11 @@ Group: `Help`: `help`
 
 If you only want some, but not all, of the default commands, you can restrict the commands that you register in two ways.
 
-1. Pass an array of groups to the RegisterDefaultCommands function: `Cmdr.Registry:RegisterDefaultCommands({"Help", "DefaultUtil"})`
+1. Pass an array of groups to the RegisterDefaultCommands function: `CmdrX.Registry:RegisterDefaultCommands({"Help", "DefaultUtil"})`
 2. Pass a filter function that accepts a CommandDefinition and either returns `true` or `false`:
 
 ```lua
-Cmdr.Registry:RegisterDefaultCommands(function(cmd)
+CmdrX.Registry:RegisterDefaultCommands(function(cmd)
 	return #cmd.Name < 6 -- This is absurd... but possible!
 end)
 ```
@@ -137,7 +137,7 @@ Instead of typing out an entire argument, you can insert the following operators
 
 "All possible values" is determined automatically by using the values that are displayed in the autocomplete menu when you haven't typed anything for that argument yet.
 
-If you want Cmdr to interpret the operator as literal text, you can escape these operators by inserting a `\` before them. For example: `\*` will be interpreted as a literal `*`.
+If you want CmdrX to interpret the operator as literal text, you can escape these operators by inserting a `\` before them. For example: `\*` will be interpreted as a literal `*`.
 
 ### Example
 
@@ -206,7 +206,7 @@ return {
 		-- This is an example of a dynamic inline type
 		function(context)
 			return {
-				Type = context.Cmdr.Util.MakeEnumType("option", {"add", "remove"}),
+				Type = context.CmdrX.Util.MakeEnumType("option", {"add", "remove"}),
 				Name = "Action",
 				Description = "Add or remove",
 			}

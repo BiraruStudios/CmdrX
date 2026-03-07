@@ -59,7 +59,7 @@ return function(registry)
 end
 ```
 
-Take a gander at the [built-in types](https://github.com/evaera/Cmdr/tree/master/Cmdr/BuiltInTypes) for more examples.
+Take a gander at the [built-in types](https://github.com/BiraruStudios/CmdrX/tree/master/CmdrX/BuiltInTypes) for more examples.
 
 ## Default value
 
@@ -73,6 +73,6 @@ Because Enum types are so common, there is a special function that easily lets y
 
 ```lua
 return function (registry)
-	registry:RegisterType("place", registry.Cmdr.Util.MakeEnumType("Place", {"World 1", "World 2", "World 3", "Final World"}))
+	registry:RegisterType("place", registry.CmdrX.Util.MakeEnumType("Place", {"World 1", "World 2", "World 3", "Final World"}))
 end
 ```
