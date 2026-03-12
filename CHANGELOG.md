@@ -1,5 +1,13 @@
 # Changelog
 
+# v1.13.0
+
+- Official rebrand to **CmdrX** across documentation, site tagline, and project assets
+- Migrated toolchain from aftman to rokit
+- Changed main page a little bit and updated site tagline
+- Applied comprehensive stylua and selene fixes
+- Added new Selene standard file
+
 ## v1.12.0
 
 - Add `convertTimestamp` default command, outputs a human-readable timestamp from epoch seconds
