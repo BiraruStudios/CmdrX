@@ -47,3 +47,4 @@ roblox.toml
 roblox.yml
 sourcemap.json
 build
+*.rbxm
