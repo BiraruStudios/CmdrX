@@ -5,7 +5,7 @@ version = "1.13.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "server"
-exclude = ["assets", "docs"]
+exclude = ["assets", "docs", "node_modules", "pages", "package-lock.json", "sourcemap.json", "*.rbxm", "moonwave.toml", "rokit.toml", "selene.toml", "stylua.toml"]
 include = ["CHANGELOG.md", "CmdrX", "default.project.json", "LICENSE"]
 
 [dependencies]
